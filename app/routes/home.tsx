@@ -1,13 +1,12 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import ShortenerForm from "../../src/components/ShortenerForm";
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "URL Shortener" },
+    { name: "description", content: "URL Shortener with Logging Middleware" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <ShortenerForm />;
 }
